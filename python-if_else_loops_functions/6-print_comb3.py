@@ -17,4 +17,4 @@ for num in range(1, 100):
 
         line += f"{num}, "
 
-print(f"{line[0:-2]}")
+print("{0}".format(line[0:-2]))
