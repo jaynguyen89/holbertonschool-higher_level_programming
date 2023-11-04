@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+"""file document"""
 class Square:
+    """class document"""
     __size = 0
 
+    """init"""
     def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -10,5 +13,6 @@ class Square:
         else:
             self.__size = size
 
+    """area"""
     def area(self):
         return self.__size * self.__size

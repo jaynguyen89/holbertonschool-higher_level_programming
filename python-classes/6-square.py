@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""file document"""
 class Square:
+    """class document"""
+
+    """init"""
     def __init__(self, size=0, position=(0, 0)):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -17,14 +21,17 @@ class Square:
         else:
             self.__position = position
 
+    """attr"""
     @property
     def size(self):
         return self.__size
 
+    """attr"""
     @property
     def position(self):
         return self.__position
 
+    """attr"""
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -34,6 +41,7 @@ class Square:
         else:
             self.__size = value
 
+    """attr"""
     @position.setter
     def position(self, value):
         if len(value) != 2 or \
@@ -45,9 +53,11 @@ class Square:
         else:
             self.__position = value
 
+    """area"""
     def area(self):
         return self.__size * self.__size
 
+    """my_print"""
     def my_print(self):
         if self.__size == 0:
             print("")
