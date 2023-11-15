@@ -1,16 +1,20 @@
 #!/usr/bin/python3
+"""document"""
 
 
 class Rectangle:
+    """document"""
 
     def __init__(self, width=0, height=0):
         self.__height = height
         self.__width = width
 
+    """document"""
     @property
     def width(self):
         return self.__width
 
+    """document"""
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -20,10 +24,12 @@ class Rectangle:
         else:
             self.__width = value
 
+    """document"""
     @property
     def height(self):
         return self.__height
 
+    """document"""
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -33,19 +39,10 @@ class Rectangle:
         else:
             self.__height = value
 
+    """document"""
     def area(self):
         return self.__height * self.__width
 
+    """document"""
     def perimeter(self):
         return (self.__height + self.__width) * 2
-
-
-if __name__ == '__main__':
-    my_rectangle = Rectangle(2, 4)
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
-
-    print("--")
-
-    my_rectangle.width = 10
-    my_rectangle.height = 3
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))

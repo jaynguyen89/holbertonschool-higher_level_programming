@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+"""document"""
 
 
 class Rectangle:
+    """document"""
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -10,10 +13,12 @@ class Rectangle:
         self.__height = height
         self.__width = width
 
+    """document"""
     @property
     def width(self):
         return self.__width
 
+    """document"""
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -23,10 +28,12 @@ class Rectangle:
         else:
             self.__width = value
 
+    """document"""
     @property
     def height(self):
         return self.__height
 
+    """document"""
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -36,12 +43,15 @@ class Rectangle:
         else:
             self.__height = value
 
+    """document"""
     def area(self):
         return self.__height * self.__width
 
+    """document"""
     def perimeter(self):
         return (self.__height + self.__width) * 2
 
+    """document"""
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
@@ -54,10 +64,12 @@ class Rectangle:
         a2 = rect_2.area()
         return rect_1 if a1 >= a2 else rect_2
 
+    """document"""
     @classmethod
     def square(cls, size=0):
         return Rectangle(size, size)
 
+    """document"""
     def __str__(self):
         s = ""
         if self.__width == 0 or self.__height == 0:
@@ -72,13 +84,8 @@ class Rectangle:
 
         return s
 
+    """document"""
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
         del self
-
-
-if __name__ == '__main__':
-    my_square = Rectangle.square(5)
-    print("Area: {} - Perimeter: {}".format(my_square.area(), my_square.perimeter()))
-    print(my_square)
