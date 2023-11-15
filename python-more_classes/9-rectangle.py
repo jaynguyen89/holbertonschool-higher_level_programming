@@ -67,7 +67,12 @@ class Rectangle:
     """document"""
     @classmethod
     def square(cls, size=0):
-        return Rectangle(size, size)
+        if not isinstance(size, int):
+            raise TypeError("width must be an integer")
+        elif size < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            return Rectangle(size, size)
 
     """document"""
     def __str__(self):
