@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """docs"""
     if n == 0:
         return []
     elif n == 1:
