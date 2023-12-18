@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+"""docs"""
+
+
 def read_file(filename=""):
-    pass
+    with open(filename) as file:
+        lines = file.readlines()
 
-
-if __name__ == '__main__':
-    read_file("test.txt")
+    for line in lines:
+        print(line, end='')
