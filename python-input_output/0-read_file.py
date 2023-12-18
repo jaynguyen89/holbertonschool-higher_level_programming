@@ -3,6 +3,7 @@
 
 
 def read_file(filename=""):
+    """docs"""
     with open(filename) as file:
         lines = file.readlines()
 

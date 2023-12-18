@@ -5,6 +5,7 @@ import json
 
 
 def load_from_json_file(filename):
+    """docs"""
     with open(filename) as file:
         data = json.load(file)
         return data

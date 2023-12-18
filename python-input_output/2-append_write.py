@@ -3,6 +3,7 @@
 
 
 def append_write(filename="", text=""):
+    """docs"""
     with open(filename, "a+") as file:
         file.write(text)
 
